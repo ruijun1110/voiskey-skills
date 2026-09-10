@@ -2,17 +2,15 @@
 
 ## 最简单：让 AI 帮你装
 
-如果你用的是 **Claude Code**（包括 Claude 桌面应用的 Code 标签页）或 **Codex**，把下面这句话发给 AI：
+直接把下面这句话发给 AI：
 
 ```
-按照 https://github.com/ruijun1110/voiskey-skills 的 README 帮我安装 voiskey-copy
+从 https://github.com/ruijun1110/voiskey-skills 帮我安装 voiskey-copy skill。
 ```
 
 AI 会按照下面的[给 AI 的安装说明](#给-ai-的安装说明)自动装好。过程中它可能请你允许运行命令或联网，点允许即可。装好后按它的提示刷新或重启。
 
-**更新：** 收到更新通知后，同样对 AI 说"按照 https://github.com/ruijun1110/voiskey-skills 的 README 帮我更新 voiskey-copy"。
-
-网页版（claude.ai、ChatGPT 网页版）里的 AI 没法在你的电脑上安装，请用下面的手动方式。
+**更新：** 收到更新通知后，同样对 AI 说"从 https://github.com/ruijun1110/voiskey-skills 帮我更新 voiskey-copy skill"。
 
 ## 手动安装
 
@@ -78,41 +76,14 @@ curl -fsSL -o /tmp/voiskey-copy.zip https://github.com/ruijun1110/voiskey-skills
 安装：
 
 1. 先检查 `~/.claude/skills/voiskey-copy` 是否存在。如果存在，这是旧的手动副本，会和插件同名冲突。先告诉用户，经用户同意后再删除。
-2. 运行：
-
-```bash
-claude plugin marketplace add ruijun1110/voiskey-skills
-```
-
-```bash
-claude plugin install voiskey-copy@voiskey-skills --scope user
-```
-
+2. 安装最新的skill。
 3. 告诉用户运行 `/reload-plugins`，或者重启 Claude Code。
-
-不要把 Skill 文件复制到 `~/.claude/skills` 或项目的 `.claude/skills`，请用上面的插件方式安装，这样之后才能更新。
-
-更新：
-
-```bash
-claude plugin marketplace update voiskey-skills
-```
-
-```bash
-claude plugin update voiskey-copy@voiskey-skills
-```
-
-然后告诉用户运行 `/reload-plugins`。
 
 ### 你是 Codex
 
-安装和更新都运行同一条命令，它会装到全局目录 `~/.codex/skills`，并替换旧版本：
+把 skill 安装到全局目录 `~/.codex/skills`，或替换旧版本：
 
-```bash
-curl -fsSL -o /tmp/voiskey-copy.zip https://github.com/ruijun1110/voiskey-skills/releases/latest/download/voiskey-copy.zip && mkdir -p ~/.codex/skills && rm -rf ~/.codex/skills/voiskey-copy && unzip -q /tmp/voiskey-copy.zip -d ~/.codex/skills
-```
-
-完成后告诉用户重启 Codex。不要安装到项目的 `.agents/skills` 或 `.codex/skills`，那样只在当前项目生效。
+完成后告诉用户重启 Codex。
 
 ### 你在网页版里
 

@@ -1,0 +1,14 @@
+{
+  "name": "voiskey-skills",
+  "description": "Voiskey skills for Claude Code and Codex.",
+  "owner": {
+    "name": "Raymond Wang"
+  },
+  "plugins": [
+    {
+      "name": "voiskey-copy",
+      "source": "./plugins/voiskey-copy",
+      "description": "Write and review Voiskey material against the Voiskey Brand System."
+    }
+  ]
+}

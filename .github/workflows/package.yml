@@ -1,0 +1,24 @@
+name: Package skill
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Zip the skill folder
+        run: cd plugins/voiskey-copy/skills && zip -r "$GITHUB_WORKSPACE/voiskey-copy.zip" voiskey-copy -x "*.DS_Store"
+      - name: Publish as the latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --yes --cleanup-tag || true
+          gh release create latest voiskey-copy.zip \
+            --title "voiskey-copy (latest)" \
+            --notes "Download voiskey-copy.zip and upload it to Claude or ChatGPT on the web. Built from ${GITHUB_SHA::7}."

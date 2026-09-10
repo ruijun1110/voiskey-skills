@@ -1,0 +1,4 @@
+interface:
+  display_name: "Voiskey Copy"
+  short_description: "Write and review Voiskey brand copy"
+  default_prompt: "Use $voiskey-copy to draft launch copy for Voiskey."

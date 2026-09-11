@@ -6,9 +6,9 @@ The canonical description of the product. Anyone reading this, in any role, fini
 
 ## 1. What Voiskey is
 
-**One line.** Voiskey is an **expression copilot** that turns a rough spoken thought into finished text, wherever you are writing.
+**One line.** Voiskey is **AI voice typing** that turns a rough spoken thought into finished text, wherever you are writing.
 
-**Intro.** Voiskey is an expression copilot that turns a rough spoken thought into finished text, wherever you are writing. Say the thought as it arrives, and Voiskey understands your intention and writes what you meant, or what you asked for, in any language, fitted to where and whom it is going to.
+**Intro.** Voiskey is AI voice typing that turns a rough spoken thought into finished text, wherever you are writing. Say the thought as it arrives, and Voiskey understands your intention and writes what you meant, or what you asked for, in any language, fitted to where and whom it is going to.
 
 | | |
 |---|---|
@@ -18,6 +18,7 @@ The canonical description of the product. Anyone reading this, in any role, fini
 | **Accounts** | One account across all four, syncing login state, Personal Dictionary and subscription status in real time |
 | **Free plan** | 2,000 words per week across all features combined |
 | **Pro** | No weekly word limit: unlimited dictation, unlimited translation, and unlimited Ask AI powered by Google Gemini. Early access to new features |
+| **Sign-up offer** | One month of Pro free for every new account, on sign-up |
 | **Price** | $12 per month billed annually. $30 per month billed monthly |
 | **Languages** | 100+. The count is claimed, not enumerated |
 

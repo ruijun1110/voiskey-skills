@@ -21,6 +21,7 @@ The canonical description of the product. Anyone reading this, in any role, fini
 | **Sign-up offer** | One month of Pro free for every new account, on sign-up |
 | **Price** | $12 per month billed annually. $30 per month billed monthly |
 | **Languages** | 100+. The count is claimed, not enumerated |
+| **Data** | Two options the user chooses between. Privacy Mode: data is neither stored nor used to improve Voiskey. Help Us Improve: data may be used to improve Voiskey's features and models, handled in a privacy-preserving way |
 
 ---
 
@@ -65,7 +66,8 @@ Users are grouped by the kind of Expression Gap they experience, not by job titl
 | **Context Awareness** | Detects the active application and adapts tone, format and register to it | Output matches what the destination expects in register, structure, length and convention, without the user adjusting anything |
 | **Personal Dictionary** | Stores and syncs user-specific names, companies, terms and phrases, learning from corrections | The user's own vocabulary stops causing errors. A correction is made once |
 | **Whisper Input** | Recognizes low-volume speech, including against background noise | Voice stays available in the places where speaking aloud is not an option: open offices, shared rooms, transit, late at night |
-| **Privacy Mode** | On by default. Speech is processed securely and privately. Nothing is retained and no user data is used for training | Nothing a user says is stored or used to train a model |
+| **Privacy Mode** | When on, the user's data is neither stored nor used to improve Voiskey | Users keep what they say entirely to themselves |
+| **Help Us Improve** | When on, the user's data may be used to improve Voiskey's features and models. It is handled in a privacy-preserving way, and Voiskey never sees the user's words | Users help make Voiskey better without giving up their privacy |
 | **Translation** | Translates dictated speech into a target language at output | The user works in their own language and the recipient reads native text |
 | **Ask AI** | Accepts spoken instructions and questions, writing results into the active field or returning an answer in a window, including about selected text. Powered by Google Gemini | AI is reachable without switching windows or rebuilding context. A spoken question or instruction is enough |
 | **Sync** | Carries settings, Personal Dictionary and subscription state between a user's devices | Personalization follows the user rather than the device |
@@ -100,21 +102,28 @@ Users are grouped by the kind of Expression Gap they experience, not by job titl
 | **Launch hero** | AI voice typing that gets what you meant. |
 | **Launch tagline** | AI voice typing that sounds right in every app. |
 
+**Privacy lines.** Use these verbatim wherever privacy is described. Do not paraphrase them.
+
+| Setting | Line |
+|---|---|
+| **Privacy Mode** | With Privacy Mode on, your data is neither stored nor used to improve Voiskey. |
+| **Help Us Improve** | With Help Us Improve on, we may use your data to improve Voiskey's features and models. Your data is handled in a privacy-preserving way. We never see your words. |
+
 **Highlights.** Surfaces select from this list. They do not write new lines.
 
-| Line | Highlights | Type |
-|---|---|---|
-| Skip editing. Just speak and send. | Dictation | Feature |
-| Sounds right in every app. | Context Awareness | Feature |
-| Learns your names and terms automatically. | Personal Dictionary | Feature |
-| Work at a whisper. | Whisper Input | Feature |
-| Privacy is built in. | Privacy Mode | Feature |
-| Speak your language, and sound native in any other. | Translation | Feature |
-| Ask AI anything without leaving your work. | Ask AI | Feature |
-| Works on all your devices. | Sync | Feature |
-| Works anywhere you type. | Universal Input | Feature |
-| Spells your stack, tags your files. | Coding | Use case |
-| 5x faster than typing | Speed | Proof |
+| Line                                                | Highlights          | Type     |
+| --------------------------------------------------- | ------------------- | -------- |
+| Skip editing. Just speak and send.                  | Dictation           | Feature  |
+| Sounds right in every app.                          | Context Awareness   | Feature  |
+| Learns your names and terms automatically.          | Personal Dictionary | Feature  |
+| Work at a whisper.                                  | Whisper Input       | Feature  |
+| Privacy is built in.                                | Privacy Mode        | Feature  |
+| Speak your language, and sound native in any other. | Translation         | Feature  |
+| Ask AI anything without leaving your work.          | Ask AI              | Feature  |
+| Works on all your devices.                          | Sync                | Feature  |
+| Works anywhere you type.                            | Universal Input     | Feature  |
+| Spells your stack, tags your files.                 | Coding              | Use case |
+| 5x faster than typing                               | Speed               | Proof    |
 
 ---
 

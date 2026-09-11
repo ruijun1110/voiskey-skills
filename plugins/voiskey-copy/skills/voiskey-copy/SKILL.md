@@ -23,7 +23,7 @@ Reuse wording only from §6. Everywhere else, phrase the facts according to the 
 
 Read `references/brand-system.md` in full. Do this every time, before drafting a single line. It changes, and a summary you remember from earlier is not it.
 
-## The five hard rules
+## The six hard rules
 
 Never break these. If following one means you cannot complete the request, stop and say what is missing.
 
@@ -32,6 +32,7 @@ Never break these. If following one means you cannot complete the request, stop 
 3. **Never contradict §5 What Voiskey is not.**
 4. **The only company name is Voiskey.** Describe the team only as §7 Who makes it does. No other company name appears, except where the Brand System itself uses one, such as the platforms and model in §1. If a draft or request contains any other company name, call it out. This holds in every language, every market, and every draft, including internal ones that could be pasted outward.
 5. **Use feature names exactly as written in §4.** Never adapt a feature name for rhythm, length or headline fit.
+6. **Never write a privacy claim of your own.** Describe privacy only with the privacy lines in §6, used verbatim.
 
 ## When something breaks a rule
 
@@ -58,7 +59,7 @@ Judgment call, not a hard rule: a forced fit reads worse than a well-made new li
 1. Read the Brand System.
 2. Establish the surface and the audience. If the request does not say, ask.
 3. Draft in words chosen for that surface. Take facts from the Brand System, reuse a §6 line where one fits, and phrase everything else yourself.
-4. Check the draft against the five hard rules.
+4. Check the draft against the six hard rules.
 5. Return the copy, and list any fact you needed that the Brand System does not contain.
 
 ## Reviewing

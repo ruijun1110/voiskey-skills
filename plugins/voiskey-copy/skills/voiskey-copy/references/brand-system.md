@@ -18,7 +18,7 @@ The canonical description of the product. Anyone reading this, in any role, fini
 | **Accounts** | One account across all four, syncing login state, Personal Dictionary and subscription status in real time |
 | **Free plan** | 2,000 words per week across all features combined |
 | **Pro** | No weekly word limit: unlimited dictation, unlimited translation, and unlimited Ask AI powered by Google Gemini. Early access to new features |
-| **Sign-up offer** | One month of Pro free for every new account, on sign-up |
+| **Sign-up offer** | Every new account gets a one-month free trial of Pro |
 | **Price** | $12 per month billed annually. $30 per month billed monthly |
 | **Languages** | 100+. The count is claimed, not enumerated |
 | **Data** | Two options the user chooses between. Privacy Mode: data is neither stored nor used to improve Voiskey. Help Us Improve: data may be used to improve Voiskey's features and models, handled in a privacy-preserving way |

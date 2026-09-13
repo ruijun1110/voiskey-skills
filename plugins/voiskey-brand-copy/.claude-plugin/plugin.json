@@ -1,0 +1,5 @@
+{
+  "name": "voiskey-brand-copy",
+  "description": "Draft and review static external-facing Voiskey brand copy. It does not handle interactive replies to individual Product Hunt comments or threads.",
+  "author": { "name": "Raymond Wang" }
+}

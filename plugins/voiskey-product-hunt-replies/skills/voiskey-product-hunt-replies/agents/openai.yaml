@@ -1,0 +1,4 @@
+interface:
+  display_name: "Voiskey Product Hunt Replies"
+  short_description: "Write thoughtful Voiskey Product Hunt replies"
+  default_prompt: "Use $voiskey-product-hunt-replies to reply to this Voiskey Product Hunt comment."

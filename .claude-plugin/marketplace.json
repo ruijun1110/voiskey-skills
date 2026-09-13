@@ -6,9 +6,14 @@
   },
   "plugins": [
     {
-      "name": "voiskey-copy",
-      "source": "./plugins/voiskey-copy",
-      "description": "Write and review Voiskey material against the Voiskey Brand System."
+      "name": "voiskey-brand-copy",
+      "source": "./plugins/voiskey-brand-copy",
+      "description": "Draft and review static external-facing Voiskey brand copy."
+    },
+    {
+      "name": "voiskey-product-hunt-replies",
+      "source": "./plugins/voiskey-product-hunt-replies",
+      "description": "Draft thoughtful Voiskey maker replies to Product Hunt comments and threads."
     }
   ]
 }

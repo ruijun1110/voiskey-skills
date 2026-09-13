@@ -1,4 +1,4 @@
-name: Package skill
+name: Package skills
 
 on:
   push:
@@ -12,13 +12,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Zip the skill folder
-        run: cd plugins/voiskey-copy/skills && zip -r "$GITHUB_WORKSPACE/voiskey-copy.zip" voiskey-copy -x "*.DS_Store"
+      - name: Sync the Brand System
+        run: bash scripts/sync-brand-system.sh
+      - name: Package the skills
+        run: |
+          cd plugins/voiskey-brand-copy/skills
+          zip -r "$GITHUB_WORKSPACE/voiskey-brand-copy.zip" voiskey-brand-copy -x "*.DS_Store"
+          cd "$GITHUB_WORKSPACE/plugins/voiskey-product-hunt-replies/skills"
+          zip -r "$GITHUB_WORKSPACE/voiskey-product-hunt-replies.zip" voiskey-product-hunt-replies -x "*.DS_Store"
+          mkdir -p "$RUNNER_TEMP/voiskey-skills"
+          cp -R "$GITHUB_WORKSPACE/plugins/voiskey-brand-copy/skills/voiskey-brand-copy" "$RUNNER_TEMP/voiskey-skills/"
+          cp -R "$GITHUB_WORKSPACE/plugins/voiskey-product-hunt-replies/skills/voiskey-product-hunt-replies" "$RUNNER_TEMP/voiskey-skills/"
+          cd "$RUNNER_TEMP/voiskey-skills"
+          zip -r "$GITHUB_WORKSPACE/voiskey-skills.zip" voiskey-brand-copy voiskey-product-hunt-replies -x "*.DS_Store"
       - name: Publish as the latest release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete latest --yes --cleanup-tag || true
-          gh release create latest voiskey-copy.zip \
-            --title "voiskey-copy (latest)" \
-            --notes "Download voiskey-copy.zip and upload it to Claude or ChatGPT on the web. Built from ${GITHUB_SHA::7}."
+          gh release create latest voiskey-brand-copy.zip voiskey-product-hunt-replies.zip voiskey-skills.zip \
+            --title "Voiskey skills (latest)" \
+            --notes "Download an individual skill or the combined Codex package. Built from ${GITHUB_SHA::7}."

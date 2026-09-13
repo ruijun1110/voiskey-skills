@@ -1,90 +1,62 @@
 # Voiskey Skills
 
-## 最简单：让 AI 帮你装
+Voiskey 的两个独立 Skill：
 
-直接把下面这句话发给 AI：
+| Skill | 用途 |
+| --- | --- |
+| `voiskey-brand-copy` | 撰写或审核产品页、应用商店页面、发布素材、广告、社交内容、邮件、演示文稿和脚本等静态对外文案 |
+| `voiskey-product-hunt-replies` | 回复单条 Product Hunt 评论及后续对话 |
+
+## 最简单：让 AI 帮你安装或更新
+
+把下面其中一句发给 AI：
 
 ```
-从 https://github.com/ruijun1110/voiskey-skills 帮我安装 voiskey-copy skill。
+从 https://github.com/ruijun1110/voiskey-skills 帮我安装全部 Voiskey skills。
 ```
 
-AI 会按照下面的[给 AI 的安装说明](#给-ai-的安装说明)自动装好。过程中它可能请你允许运行命令或联网，点允许即可。装好后按它的提示刷新或重启。
+```
+从 https://github.com/ruijun1110/voiskey-skills 帮我安装 Voiskey Brand Copy skill。
+```
 
-**更新：** 收到更新通知后，同样对 AI 说"从 https://github.com/ruijun1110/voiskey-skills 帮我更新 voiskey-copy skill"。
+```
+从 https://github.com/ruijun1110/voiskey-skills 帮我安装 Voiskey Product Hunt Replies skill。
+```
 
-## 手动安装
+更新时使用同样的话，把“安装”改成“更新”。如果你使用两个 Skill，请一起更新。
 
-| 你用的是 | 安装方式 | 如何更新 |
-|---|---|---|
-| Claude 桌面应用 | [Claude 桌面应用](#claude-桌面应用) | 收到更新通知后让 AI 更新 |
-| Codex/ChatGPT 桌面应用 | [Codex](#codex) | 收到更新通知后再运行一次同一条命令 |
-| Claude 网页版（claude.ai） | [Claude 网页版](#claude-网页版) | 收到更新通知后重新下载上传 |
-| ChatGPT 网页版 | [ChatGPT 网页版](#chatgpt-网页版) | 收到更新通知后重新下载上传 |
-
-同时用多个工具的话，每个都按对应的步骤装一次。
-
-### Claude 桌面应用
+## Claude 桌面应用
 
 1. 打开左侧的 **Customize**，进入 **Plugins**，点右上角 **Add**，选择 **Add marketplace**，填入：
 
-```
-https://github.com/ruijun1110/voiskey-skills
-```
+   ```
+   https://github.com/ruijun1110/voiskey-skills
+   ```
 
-2. 点对话输入框旁边的 **+**，选择 **Plugins > Add plugin**，找到 **voiskey-copy**，点 **Install**，范围选 **User**（对所有项目生效）。
+2. 点对话输入框旁边的 **+**，选择 **Plugins > Add plugin**。
+3. 找到并安装一个或两个 Skill，范围选择 **User**，这样所有项目都能使用。
 
-注意：Customize 里的 **Discover** 只显示官方插件，找不到 voiskey-copy 是正常的，要从第 2 步的入口安装。
+## Codex 桌面应用
 
-**使用：** 让 Claude 写或审核 Voiskey 相关内容时，它会自动调用这个 Skill。
+直接让 Codex 按上面的请求安装一个或两个 Skill。Skill 应安装到全局目录，确保所有项目都能使用。安装或更新后如被提示，请重启 Codex。
 
-### Claude 网页版
+## Claude 和 ChatGPT 网页版
 
-1. 下载 [voiskey-copy.zip](https://github.com/ruijun1110/voiskey-skills/releases/latest/download/voiskey-copy.zip)。
-2. 在 Claude 中打开 **Settings > Capabilities**（设置 > 功能），确认 **Code execution and file creation**（代码执行和文件创建）已开启。
-3. 进入 **Customize > Add > Upload skill**，在 Download 里选中上传 `voiskey-copy.zip`。
-4. 确认这个 Skill 处于开启状态。
+下载你所使用的 Skill 最新压缩包，并分别上传：
 
-**更新：** 网页版不会自动更新。收到更新通知后，重新下载 zip，在 Claude 里删除旧的 Skill，再上传新的。
+- [Voiskey Brand Copy](https://github.com/ruijun1110/voiskey-skills/releases/latest/download/voiskey-brand-copy.zip)
+- [Voiskey Product Hunt Replies](https://github.com/ruijun1110/voiskey-skills/releases/latest/download/voiskey-product-hunt-replies.zip)
 
-### Codex
+网页版不会自动更新。更新时，重新下载并替换每个已安装的 Skill。
 
-打开 Terminal「终端」，粘贴下面这一行，回车：
+## Brand System 更新
 
-```bash
-curl -fsSL -o /tmp/voiskey-copy.zip https://github.com/ruijun1110/voiskey-skills/releases/latest/download/voiskey-copy.zip && mkdir -p ~/.codex/skills && rm -rf ~/.codex/skills/voiskey-copy && unzip -q /tmp/voiskey-copy.zip -d ~/.codex/skills
-```
+仓库只维护一份原始 Brand System，位于 `brand/brand-system.md`。每次发布前，它会被复制到两个独立 Skill 中。
 
-它会下载最新版 Skill，放进 Codex 的 Skill 文件夹，完成后重启 Codex。
-
-**更新：** 收到更新通知后，再运行一次同一条命令，它会用新版替换旧版。
-
-**使用：** 让 Codex 写或审核 Voiskey 相关内容时，它会自动调用这个 Skill。
-
-### ChatGPT 网页版
-
-1. 下载 [voiskey-copy.zip](https://github.com/ruijun1110/voiskey-skills/releases/latest/download/voiskey-copy.zip)。
-2. 在 ChatGPT 中进入 **Plugins > Skills > +** 选择 **Upload from your computer**（从电脑上传），选中 `voiskey-copy.zip`。
-
-**更新：** 网页版不会自动更新。收到更新通知后，重新下载 zip，在 ChatGPT 里删除旧的 Skill，再上传新的。
+同事电脑上的两个 Skill 没有运行时链接。因此，当 Brand System 更新后，使用两个 Skill 的同事需要一起更新，才能保证两个 Skill 都使用同一份最新 Brand System。
 
 ## 给 AI 的安装说明
 
-如果你是正在帮用户安装或更新这个 Skill 的 AI，请把它装成**全局 Skill**（对用户的所有项目生效），按你所在的工具执行下面对应的部分。不要把文件复制到某个项目文件夹里，那样只在那个项目生效，也没有更新方式。
+如果你在帮助用户安装或更新，请把用户请求的 Skill 安装为**全局 Skill**，不要放到单个项目文件夹。每个 Skill 保持各自的文件夹。
 
-### 你是 Claude Code
-
-安装：
-
-1. 先检查 `~/.claude/skills/voiskey-copy` 是否存在。如果存在，这是旧的手动副本，会和插件同名冲突。先告诉用户，经用户同意后再删除。
-2. 安装最新的skill。
-3. 告诉用户运行 `/reload-plugins`，或者重启 Claude Code。
-
-### 你是 Codex
-
-把 skill 安装到全局目录 `~/.codex/skills`，或替换旧版本：
-
-完成后告诉用户重启 Codex。
-
-### 你在网页版里
-
-你无法在用户的电脑上安装。请让用户按[手动安装](#手动安装)里网页版的步骤下载 zip 并上传。
+更新时，只替换对应的已安装 Skill。用户要求更新全部 Voiskey skills 时，更新两个 Skill。完成后，按宿主应用要求重启或重新加载。
